@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MarkdownParse {
+    public static int count = 0;
 
     static int findCloseParen(String markdown, int openParen) {
         int closeParen = openParen + 1;
@@ -33,7 +34,7 @@ public class MarkdownParse {
         Map<String, List<String>> result = new HashMap<>();
         if(dirOrFile.isDirectory()) {
             for(File f: dirOrFile.listFiles()) {
-                int count += 1;
+                count += 1;
                 System.out.println("" + count)
                 result.putAll(getLinks(f));
             }
