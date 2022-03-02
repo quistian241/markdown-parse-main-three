@@ -34,8 +34,8 @@ public class MarkdownParse {
         Map<String, List<String>> result = new HashMap<>();
         if(dirOrFile.isDirectory()) {
             for(File f: dirOrFile.listFiles()) {
-                count += 1;
-                System.out.println("" + count);
+                // count += 1;
+                System.out.println("count?");
                 result.putAll(getLinks(f));
             }
             return result;
